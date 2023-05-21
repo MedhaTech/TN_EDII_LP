@@ -15,8 +15,8 @@ const Termsandconditions = () => {
         <div className="home-main">
             {/* Mobile menu */}
             <Menu right className="landing-menu">
-                <a href="https://www.w3schools.com">Login</a>
-                <a href="https://www.google.com/">Sign up now</a>
+                <a href={`${process.env.REACT_APP_FE_URL}/login`}>Login</a>
+                <a href={`${process.env.REACT_APP_FE_URL}/register`}>Sign up now</a>
             </Menu>
             <section className="header1 mb-100">
                 <div className="home-banner">

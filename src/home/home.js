@@ -291,10 +291,12 @@ const Home = () => {
                 onOpen={() => setSidebar(!sidebar)}
                 onClose={() => setSidebar(!sidebar)}
             >
-                <a href="https://www.w3schools.com">
+                <a href={`${process.env.REACT_APP_FE_URL}/login`}>
                     {t('home_nav_links.btn_login')}
                 </a>
-                <a href="https://www.google.com/">{t('home_tl.register')}</a>
+                <a href={`${process.env.REACT_APP_FE_URL}/register`}>
+                    {t('home_tl.register')}
+                </a>
                 <Nav className="ml-auto">
                     <NavItem onClick={() => setSidebar(false)}>
                         <AnchorLink
@@ -433,12 +435,18 @@ const Home = () => {
                                     </p>
                                     <div className="d-flex mini123">
                                         <>
-                                            <Button
-                                                label={t('home_tl.register')}
-                                                btnClass="primary mx-3"
-                                                size="small"
-                                            />
-                                            <a href="https://www.w3schools.com">
+                                            <a
+                                                href={`${process.env.REACT_APP_FE_URL}/register`}
+                                            >
+                                                <Button
+                                                    label={t(
+                                                        'home_tl.register'
+                                                    )}
+                                                    btnClass="primary mx-3"
+                                                    size="small"
+                                                />
+                                            </a>
+                                            <a href={`${process.env.REACT_APP_FE_URL}/login`}>
                                                 <Button
                                                     label={t('home_tl.login')}
                                                     btnClass="primary "

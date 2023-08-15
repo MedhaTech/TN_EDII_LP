@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: mv index.php index.html
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --exclude '.git*' --follow-symlinks
